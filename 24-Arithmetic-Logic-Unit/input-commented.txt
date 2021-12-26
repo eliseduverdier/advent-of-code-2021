@@ -1,0 +1,281 @@
+z /=  1   1   1  26   1  26   1   1   26  1  26  26  26  26
+x += 12  15  11 -14  12 -10  11  13  -7  10  -2  -1  -4 -12
+y +=  4  11   7   2  11  13   9  12   6   2  11  12   3  13]
+---------------------------------
+inp w
+mul x 0     <==  reset x to 0
+add x z           so x = Z from before (or 0 on first step)
+mod x 26          and z loose its last 'digit' in base 26 (so stack.pop())
+div z 1     <------- not doing anythin
+add x 12    <- RANDOM NUMBER
+eql x w     <----- checking if x == input
+eql x 0                  if it was,
+mul y 0     <== reset y to 0
+add y 25    <----  adding 26 if x was equals input, else y = 1 ...
+mul y x        |
+add y 1     <--                      |  so it does not multiply anything
+mul z y                           <--
+mul y 0
+add y w     <---------- sets y = input
+add y 4     <-  RANDOM NUMBER
+mul y x                       <--------------------------|
+add z y    <----------- adding the y to th z stack (if x was == input + the random number, else its 0)
+---------------------------------
+inp w
+mul x 0
+add x z    # so z should be zero for before-last step
+mod x 26
+div z 1     <------- not doing anythin
+add x 15
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 11
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1     <------- not doing anythin
+add x 11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 7
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -14
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 2
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1     <------- not doing anythin
+add x 12
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 11
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 13
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1     <------- not doing anythin
+add x 11
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 9
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1     <------- not doing anythin
+add x 13
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 12
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -7
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 6
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1     <------- not doing anythin
+add x 10
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 2
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -2
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 11
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -1
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 12
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -4
+eql x w
+eql x 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 3
+mul y x
+add z y    <----------- append to the stack
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 26     <---------- pop() the stack
+add x -12
+eql x w     # so x must be != w
+eql x 0     # so x must be != 0
+mul y 0
+add y 25
+mul y x
+add y 1
+mul z y
+mul y 0
+add y w     <---------- sets y = input
+add y 13
+mul y x     # we need x == 0
+add z y    <----------- append to the stack
+
+
+
+
+
+------ repeating
+---------------------------------
+inp w
+mul x 0
+add x z
+mod x 26
+div z 1     <------- not doing anythin
